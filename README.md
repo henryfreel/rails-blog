@@ -13,9 +13,9 @@ $ rails new [app-name] -d postgresql
 
 2. `cd` into that project and creare your database
 
-```
-rake db:create
-```
+	```
+	rake db:create
+	```
 
 * System dependencies
 
