@@ -3,9 +3,19 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+## Set up
 
-* Ruby version
+1. Start new Project
+
+```
+$ rails new [app-name] -d postgresql
+```
+
+2. `cd` into that project and creare your database
+
+```
+rake db:create
+```
 
 * System dependencies
 
@@ -23,6 +33,3 @@ Things you may want to cover:
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
