@@ -1,7 +1,4 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# New Project
 
 ## Set up
 
@@ -13,23 +10,52 @@ $ rails new [app-name] -d postgresql
 
 2. `cd` into that project and creare your database
 
-	```
-	rake db:create
-	```
+```
+rake db:create
+```
 
-* System dependencies
+3. To run locally, start your rails server in a new tab (but in the same directory!)
 
-* Configuration
+```
+rails s
+```
 
-* Database creation
+4. Generate 'Page' controller, which will give you .html files, basic routes, and corresponding controller file
 
-* Database initialization
+```
+$ rails g controller Page index about
+```
 
-* How to run the test suite
+4. Your Routes.rb should look like this
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+#
+# routes.db
+#
 
-* Deployment instructions
+Rails.application.routes.draw do
+  
+  get 'page/index'
 
-* ...
+  get 'page/about'
+
+end
+
+```
+
+5. Setup root route, change your routes.rb file to only have the root route
+
+```
+#
+# routes.db
+#
+
+Rails.application.routes.draw do
+  
+  root "pages#index"
+
+end
+
+```
+
 

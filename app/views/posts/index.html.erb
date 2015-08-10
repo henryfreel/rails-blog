@@ -1,0 +1,17 @@
+<h1>Posts#index</h1>
+
+<%= link_to "New Post", new_post_path %>
+<br>
+<br>
+<% @posts.each do |post| %>
+
+    <div>
+        Name: <%= post.title %> <br>
+        Type: <%= post.body %> <br>
+        <%= link_to "Edit Post", edit_post_path(id: post.id) %>
+    </div>
+    <br>
+
+<% end %>
+
+
