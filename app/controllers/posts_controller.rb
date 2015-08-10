@@ -55,4 +55,17 @@ class PostsController < ApplicationController
 		render :show
 	end
 
+	def destroy
+		# set id from params
+		post_id = params[:id]
+
+		# find the plane by its id
+		post = Post.find(post_id)
+
+		# delete it from the db
+		post.destroy
+
+		redirect_to posts_path
+	end
+
 end
